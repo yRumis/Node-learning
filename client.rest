@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:3000
+
+### get clientes
+# @name clientes
+GET {{baseUrl}}/clientes/
+
+### post clientes
+# @name postcliente
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+    "nome": "Felipe",
+    "email": "felipe@gmail.com",
+    "idade": 20
+}
+
+### Update client
+# @name updateclient
+PUT {{baseUrl}}/clientes/2
+Content-Type: application/json
+
+{
+    "nome": "Felipinas",
+    "email": "felipe2543@gmail.com",
+    "idade": 24
+}
+
+### Deletar usuario
+# @name deletarUser
+DELETE {{baseUrl}}/clientes/2
