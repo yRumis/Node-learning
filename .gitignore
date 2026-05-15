@@ -148,3 +148,7 @@ lib/
 
 ## docker
 docker-compose.yml
+
+prisma/
+
+src/generated
