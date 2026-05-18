@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ### Update client
 # @name updateclient
-PUT {{baseUrl}}/clientes/2
+PUT {{baseUrl}}/clientes/3
 Content-Type: application/json
 
 {
