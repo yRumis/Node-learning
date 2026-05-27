@@ -1,8 +1,10 @@
 import { Router } from 'express'
 import clienteController from '../controllers/cliente.controller.js'
+import { authMiddleware } from '../middlewares/auth.middleware.js';
 
 const router = Router();
 
+router.use(authMiddleware);
 
 router.get('/', clienteController.listar);
 router.get('/:id', clienteController.buscarPorId);

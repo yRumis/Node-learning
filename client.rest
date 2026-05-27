@@ -3,6 +3,7 @@
 ### get clientes
 # @name clientes
 GET {{baseUrl}}/clientes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsYXlsYWgyNDdAZ21haWwuY29tIiwibm9tZSI6IkxheWxhaCIsImlhdCI6MTc3OTgzMzU3MCwiZXhwIjoxNzgwNDM4MzcwfQ.vJ4FXWBfYVtcEvEPILloYdRFhxWLord1UOF3eDyDNMI
 
 ### post clientes
 # @name postcliente
@@ -29,3 +30,25 @@ Content-Type: application/json
 ### Deletar usuario
 # @name deletarUser
 DELETE {{baseUrl}}/clientes/2
+
+### Criar usuario autenticado/ token gerada
+# @name registrarAuth
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "nome": "Laylah",
+    "email": "laylah247@gmail.com",
+    "senha": "675942"
+}
+
+### Criar usuario autenticado/ token gerada
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "nome": "Felipinas",
+    "email": "felipe2544@gmail.com",
+    "senha": "24333"
+}

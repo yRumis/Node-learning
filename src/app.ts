@@ -1,7 +1,8 @@
 import express, { type Request, type Response} from 'express'
 import clienteRoutes from './routes/cliente.routes.js'
+import authRoutes from './routes/auth.routes.js'
 
-const app = express();
+export const app = express();
 app.use(express.json());
 
 app.get('/',(req: Request, res: Response)=>{
@@ -9,7 +10,9 @@ app.get('/',(req: Request, res: Response)=>{
 })
 
 app.use('/clientes', clienteRoutes)
+app.use('/auth', authRoutes)
 
-app.listen(3000, ()=>{
-    console.log("estamos rodando normalmente")
-})
+
+
+
+export default app;
